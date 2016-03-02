@@ -1,4 +1,4 @@
-package mamilist.cordova.baichuan;
+package uuleaf.cordova.baichuan;
 
 import android.content.Context;
 import android.telephony.TelephonyManager;
