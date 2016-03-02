@@ -96,19 +96,41 @@ TaobaoBaichuan.orders_show(function(){
 ```
 
  
-# Prepare 安装预备
+# Prepare 安装预备(必读)
 
-百川SDK在app内实现应用内淘宝交易闭环，用户可以不跳转手机淘宝，在APP内直接购买淘宝商品，极大的优化了无线购买体验；还提供阿里妈妈淘客分佣能力，在SDK中有带淘客结算的交易流程，让开发者获得导购佣金。
+   1. [注册您的百川账号](http://baichuan.taobao.com/portal/index.htm)
+   
+   
+   2. 创建 百川无线应用
+   
+      <img src="screenshots/g1.jpg" width="900" height="400">
+      
+      
+   3. 完善你的应用 基本信息
+   
+      <img src="screenshots/g2.jpg" width="900" height="400">
+      
+      
+   4. 申请开通  初级电商能力
+   
+      <img src="screenshots/g3.jpg" width="900" height="400">
+      
+      
+   5. 生成客户端SDK包，并下载
+      
+      <img src="screenshots/g4.jpg" width="900" height="400">
 
-[更多百川信息](http://baichuan.taobao.com/doc2/detail?spm=a3c0d.7662649.0.0.XTcmuf&treeId=30&articleId=103655&docType=1)
-
-##　
-
-
+   6. 解压到下载的SDK
+   
+      <img src="screenshots/g5.jpg" width="900" height="400">
+      
+   7. 将上一步中的 libs以及res目录 覆盖到 你的cordova项目目录下的\platforms\android 中
+   
+     <img src="screenshots/g5.jpg" width="900" height="400">
+     
 # Install
 
-1. ```cordova plugin add cordova-plugin-wechat  --variable wechatappid=YOUR_WECHAT_APPID```, or using [plugman](https://npmjs.org/package/plugman), [phonegap](https://npmjs.org/package/phonegap), [ionic](http://ionicframework.com/)
-
+1. 
 2. ```cordova build ios``` or ```cordova build android```
 
 3. (iOS only) if your cordova version <5.1.1,check the URL Type using XCode
@@ -118,3 +140,6 @@ TaobaoBaichuan.orders_show(function(){
   
 # TODO
 
+百川SDK在app内实现应用内淘宝交易闭环，用户可以不跳转手机淘宝，在APP内直接购买淘宝商品，极大的优化了无线购买体验；还提供阿里妈妈淘客分佣能力，在SDK中有带淘客结算的交易流程，让开发者获得导购佣金。
+
+[更多百川信息](http://baichuan.taobao.com/doc2/detail?spm=a3c0d.7662649.0.0.XTcmuf&treeId=30&articleId=103655&docType=1)
