@@ -146,4 +146,4 @@ TaobaoBaichuan.orders_show(function(){
 
 # Links
   1. [更多百川信息](http://baichuan.taobao.com/doc2/detail?spm=a3c0d.7662649.0.0.XTcmuf&treeId=30&articleId=103655&docType=1)
-  2. [百川客户端SDK基础集成(]http://baichuan.taobao.com/doc2/detail.htm?treeId=51&articleId=102861&docType=1)
+  2. [百川客户端SDK基础集成](http://baichuan.taobao.com/doc2/detail.htm?treeId=51&articleId=102861&docType=1)
