@@ -26,7 +26,9 @@ module.exports = {
     cart_show: function (successCallback, errorCallback) {
         successCallback = successCallback || defcbk;
         errorCallback = errorCallback || defcbk;
-        cordova.exec(successCallback, errorCallback, 'BaiChuan', 'showCart', []);
+        cordova.exec(successCallback, errorCallback, "BaiChuan", 'showMyCartsPage', [
+            {}
+        ]);
     },
     cart_add: function (openid, successCallback, errorCallback) {
         successCallback = successCallback || defcbk;

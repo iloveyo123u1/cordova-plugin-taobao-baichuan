@@ -17,11 +17,6 @@ Hope some iOS developers  Join in to develop ios side(IOS版本期待您的加�
 
 简单的说，就是集成百川SDK后，就能在app内实现应用内淘宝交易闭环，用户可以不跳转手机淘宝，在APP内直接购买淘宝商品，极大的优化了无线购买体验。
 
-# Example
-
-See [cordova-plugin-taobao-baichuan/example_www](https://github.com/xu-li/cordova-plugin-taobao-baichuan/example_www)
-
-
 
 # Usage
 
@@ -51,7 +46,7 @@ TaobaoBaichuan.item_show(args, successCallback, errorCallback)
  <img src="screenshots/item.jpg" width="250" height="430">
 
 
-## Show taobao cart page 打开淘宝购物车
+## Show taobao cart page 打开淘宝购物车(需要高级电商功能)
 TaobaoBaichuan.cart_show(successCallback, errorCallback)
  * successCallback: function 成功后回调
  * errorCallback function 失败后回调
@@ -66,7 +61,7 @@ TaobaoBaichuan.cart_show(function(){
 
  <img src="screenshots/cart.png" width="250" height="430">
  
-## Add item to taobao cart 将商品加入到淘宝购物车
+## Add item to taobao cart 将商品加入到淘宝购物车(需要高级电商功能)
 TaobaoBaichuan.cart_add(openid,successCallback, errorCallback)
  * openid 商品openid 
  * successCallback: function 成功后回调
