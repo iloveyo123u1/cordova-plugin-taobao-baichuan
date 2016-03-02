@@ -127,6 +127,9 @@ TaobaoBaichuan.orders_show(function(){
 # Install
 
   1. ```cordova plugin add https://github.com/uuleaf/cordova-plugin-taobao-baichuan.git```
+     OR
+     ```cordova plugin add cordova-plugin-taobao-baichuan```
+     
   2. ```cordova build android```
 
 
