@@ -15,6 +15,7 @@ Hope some iOS developers  Join in to develop ios side(IOS版本期待您的加�
   3. No taobao login needed in order page (淘宝订单页面免登陆)
   4. Api for both h5 taobao page and naive taobao page (提供淘宝H5以及原生两种方式打开商品界面)
 
+简单的说，就是集成百川SDK后，就能在app内实现应用内淘宝交易闭环，用户可以不跳转手机淘宝，在APP内直接购买淘宝商品，极大的优化了无线购买体验。
 
 # Example
 
@@ -98,48 +99,53 @@ TaobaoBaichuan.orders_show(function(){
  
 # Prepare 安装预备(必读)
 
-   1. [注册您的百川账号](http://baichuan.taobao.com/portal/index.htm)
+  1. [注册您的百川账号](http://baichuan.taobao.com/portal/index.htm)
    
    
-   2. 创建 百川无线应用
+  2. 创建 百川无线应用
    
       <img src="screenshots/g1.jpg" width="900" height="400">
       
       
-   3. 完善你的应用 基本信息
+  3. 完善你的应用 基本信息
    
       <img src="screenshots/g2.jpg" width="900" height="400">
       
       
-   4. 申请开通  初级电商能力
+  4. 申请开通  初级电商能力
    
       <img src="screenshots/g3.jpg" width="900" height="400">
       
       
-   5. 生成客户端SDK包，并下载
+  5. 生成客户端SDK包，并下载
       
       <img src="screenshots/g4.jpg" width="900" height="400">
 
-   6. 解压到下载的SDK
+  6. 解压到下载的SDK
    
       <img src="screenshots/g5.jpg" width="900" height="400">
       
-   7. 将上一步中的 libs以及res目录 覆盖到 你的cordova项目目录下的\platforms\android 中
+  7. 将上一步中的 libs以及res目录 覆盖到 你的cordova项目目录下的\platforms\android 中
    
-     <img src="screenshots/g5.jpg" width="900" height="400">
+     <img src="screenshots/g6.jpg" width="900" height="400">
      
 # Install
 
-1. 
-2. ```cordova build ios``` or ```cordova build android```
+  1. ```cordova plugin add https://github.com/uuleaf/cordova-plugin-taobao-baichuan.git```
+  2. ```cordova build android```
 
-3. (iOS only) if your cordova version <5.1.1,check the URL Type using XCode
 
 
 # FAQ
   
 # TODO
 
-百川SDK在app内实现应用内淘宝交易闭环，用户可以不跳转手机淘宝，在APP内直接购买淘宝商品，极大的优化了无线购买体验；还提供阿里妈妈淘客分佣能力，在SDK中有带淘客结算的交易流程，让开发者获得导购佣金。
+  1. Add Taobao Login Api
+  2. Add iOS version
+  3. Other Apis
+  5. Android version update
 
-[更多百川信息](http://baichuan.taobao.com/doc2/detail?spm=a3c0d.7662649.0.0.XTcmuf&treeId=30&articleId=103655&docType=1)
+
+# Links
+  1. [更多百川信息](http://baichuan.taobao.com/doc2/detail?spm=a3c0d.7662649.0.0.XTcmuf&treeId=30&articleId=103655&docType=1)
+  2. [百川客户端SDK基础集成(]http://baichuan.taobao.com/doc2/detail.htm?treeId=51&articleId=102861&docType=1)
