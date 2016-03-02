@@ -1,7 +1,6 @@
 package uuleaf.cordova.baichuan;
 
 import android.content.Context;
-import android.telephony.TelephonyManager;
 import com.alibaba.sdk.android.AlibabaSDK;
 import com.alibaba.sdk.android.ResultCode;
 import com.alibaba.sdk.android.callback.InitResultCallback;
@@ -27,7 +26,6 @@ import java.util.Map;
 
 public class BaiChuanPlugin extends CordovaPlugin {
 
-    public TelephonyManager tm;
     public Context ccontext;
     private Boolean sdk_inited = false;
 
@@ -147,7 +145,7 @@ public class BaiChuanPlugin extends CordovaPlugin {
     public boolean showItemDetailPage(String pid, String itemid, String pageType, final CallbackContext cbc) {
         TradeService tradeService = AlibabaSDK.getService(TradeService.class);
         TaokeParams taokeParams = new TaokeParams();
-        taokeParams.pid = pid;
+        taokeParams.pid = pid.equals("") ? "mm_46187559_0_0" : pid;
         //若非淘客taokeParams设置为null即可
         Map<String, String> params = new HashMap<String, String>();
         //TradeConstants.ITEM_DETAIL_VIEW_TYPE：启动页面类型，分为BAICHUAN_H5_VIEW、TAOBAO_H5_VIEW、TAOBAO_NATIVE_VIEW。
@@ -197,7 +195,7 @@ public class BaiChuanPlugin extends CordovaPlugin {
     public boolean showTaokeItemDetailByItemId(String pid, Long itemid, final CallbackContext cbc) {
         TaeWebViewUiSettings taeWebViewUiSettings = new TaeWebViewUiSettings();
         TaokeParams taokeParams = new TaokeParams();
-        taokeParams.pid = pid;
+        taokeParams.pid = pid.equals("") ? "mm_46187559_0_0" : pid;
         taokeParams.unionId = "null";
         ItemService itemService = AlibabaSDK.getService(ItemService.class);
         itemService.showTaokeItemDetailByItemId(this.cordova.getActivity(), callback(cbc), taeWebViewUiSettings, itemid, 1, null, taokeParams);
@@ -225,7 +223,7 @@ public class BaiChuanPlugin extends CordovaPlugin {
 
     public boolean addTaoKeItem2Cart(String pid, String openId, final CallbackContext cbc) {
         TaokeParams taokeParams = new TaokeParams();
-        taokeParams.pid = pid;
+        taokeParams.pid = pid.equals("") ? "mm_46187559_0_0" : pid;
         taokeParams.unionId = "null";
         CartService cartService = AlibabaSDK.getService(CartService.class);
         cartService.addTaoKeItem2Cart(this.cordova.getActivity(), callback(cbc), "加入购物车", openId, null, taokeParams);
@@ -241,7 +239,7 @@ public class BaiChuanPlugin extends CordovaPlugin {
 
     public boolean showTaoKeOrderWithSKU(String pid, String openId, final CallbackContext cbc) {
         TaokeParams taokeParams = new TaokeParams();
-        taokeParams.pid = pid;
+        taokeParams.pid = pid.equals("") ? "mm_46187559_0_0" : pid;
         taokeParams.unionId = "null";
         OrderService orderService = AlibabaSDK.getService(OrderService.class);
         orderService.showTaoKeOrderWithSKU(this.cordova.getActivity(), callback(cbc), "选择SKU", openId, null, taokeParams);

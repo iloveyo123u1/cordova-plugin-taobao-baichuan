@@ -3,6 +3,50 @@ var defcbk = function () {
 };
 //http://baichuan.taobao.com/doc2/detail.htm?spm=0.0.0.0.Ayb23v&treeId=51&articleId=102600&docType=1#s4
 module.exports = {
+    item_show: function (args, successCallback, errorCallback) {
+        if (args == null || args == undefined) {
+            args = {};
+        }
+        if (typeof args === "string" || typeof args === 'number') {
+            args = {
+                itemid:args
+            };
+        }
+        successCallback = successCallback || defcbk;
+        errorCallback = errorCallback || defcbk;
+        args.type = args.type || "taobao";
+        args.itemid = args.itemid || "";
+        args.pid = args.pid || "";
+        cordova.exec(successCallback, errorCallback, 'BaiChuan', 'showItemDetailPage', [{
+            itemid: args.itemid,
+            pid:  args.pid ,
+            pagetype: args.type
+        }]);
+    },
+    cart_show: function (successCallback, errorCallback) {
+        successCallback = successCallback || defcbk;
+        errorCallback = errorCallback || defcbk;
+        cordova.exec(successCallback, errorCallback, 'BaiChuan', 'showCart', []);
+    },
+    cart_add: function (openid, successCallback, errorCallback) {
+        successCallback = successCallback || defcbk;
+        errorCallback = errorCallback || defcbk;
+        cordova.exec(successCallback, errorCallback, 'BaiChuan', 'addItem2Cart', [
+            {
+                openid: openid
+            }
+        ]);
+    },
+    orders_show: function (successCallback, errorCallback) {
+        successCallback = successCallback || defcbk;
+        errorCallback = errorCallback || defcbk;
+        cordova.exec(successCallback, errorCallback, 'BaiChuan', 'showMyOrdersPage', [
+            {
+                status: 0,
+                all: false
+            }
+        ]);
+    },
     //唤起官方商品组件（真实id）
     showItemDetailByItemId: function (itemid, successCallback, errorCallback) {
         successCallback = successCallback || defcbk;
@@ -28,6 +72,7 @@ module.exports = {
             pid: pid
         }]);
     },
+    //最新版本
     showItemDetailPage: function (pid, itemid, pagetype, successCallback, errorCallback) {
         successCallback = successCallback || defcbk;
         errorCallback = errorCallback || defcbk;
@@ -95,7 +140,7 @@ module.exports = {
         successCallback = successCallback || defcbk;
         errorCallback = errorCallback || defcbk;
         cordova.exec(successCallback, errorCallback, "BaiChuan", 'showMyCartsPage', [
-            { }
+            {}
         ]);
     },
 

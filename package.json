@@ -1,0 +1,40 @@
+{
+  "name": "cordova-plugin-taobao-baichuan",
+  "version": "0.0.2",
+  "description": "codrova/phonegap wrapper for taobao baichuan sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uuleaf/cordova-plugin-taobao-baichuan.git"
+  },
+  "cordova": {
+    "id": "cordova.plugin.taobao.baichuan",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "taobao",
+    "cordova",
+    "phonegap",
+    "plugin",
+    "qqsdk",
+    "qq",
+    "baichuan"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=4.0.0"
+    }
+  ],
+  "author": "https://github.com/uuleaf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uuleaf/cordova-plugin-taobao-baichuan/issues"
+  },
+  "homepage": "https://github.com/uuleaf/cordova-plugin-taobao-baichuan"
+}
